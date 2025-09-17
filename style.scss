@@ -21,26 +21,29 @@ body {
     backdrop-filter: blur(20px)
 }
 
-a {
+.link {
     text-decoration: none;
     color: white;
     transition: $transition;
     padding: 10px;
     font-size: 1.2rem;
-
+    position: relative;
+    
     &:hover {
         opacity: 0.8;
+
         &:after {
             transform: scaleX(1);
         }
     }
+    
     &:after {
         content: "";
         position: absolute;
         bottom: 0;
         left: 0;
         height: 2px;
-        background-color: #ffffff;
+        background-color: $main-accent;
         width: 100%;
         transform: scaleX(0);
         transform-origin: left;
@@ -48,6 +51,7 @@ a {
 
     }
 }
+
 
 button {
     padding: 1rem;
@@ -70,10 +74,14 @@ main {
         align-items: center;
         background-color: $sec-color;
         color: white;
-        padding: 1rem;
-
+        padding: 1.3rem;
+        background-image: ur;
         h1 {
             text-align: center;
+            background-color: $sec-accent;
+            padding: 1rem;
+            box-shadow: 8px 16px 32px rgb(43, 42, 42);
+            border-radius: 8px;
         }
 
         p {
@@ -92,7 +100,7 @@ section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 1rem;
     height: 30vh;
     width: 100%;
@@ -114,14 +122,32 @@ section {
     }
 
     button {
-        width: 100%;
+        width: 30%;
         background-color: rgb(255, 254, 254);
-        
+
         &:hover {
-          
+
             background-color: rgb(15, 15, 15) !important;
             color: white;
         }
+    }
+}
+
+footer {
+    background-color: $sec-color;
+    padding: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        display: inline-block;
+        padding: 1rem;
     }
 }
 
@@ -144,13 +170,15 @@ section {
         width: 70% !important;
     }
 }
+
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    top: 0;
-  }
-  to {
-    opacity: 1;
-    top: 15px;
-  }
+    from {
+        opacity: 0;
+        top: 0;
+    }
+
+    to {
+        opacity: 1;
+        top: 15px;
+    }
 }
