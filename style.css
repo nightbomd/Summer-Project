@@ -56,7 +56,6 @@ main header {
   background-color: #1F0812;
   color: white;
   padding: 1.3rem;
-  background-image: ur;
 }
 main header h1 {
   text-align: center;
@@ -101,11 +100,15 @@ section img {
 }
 section button {
   width: 30%;
-  background-color: rgb(255, 254, 254);
+  color: white;
+  border: 0.5px solid white;
+  background-color: rgb(15, 15, 15);
+  border-radius: 2rem;
 }
 section button:hover {
-  background-color: rgb(15, 15, 15) !important;
-  color: white;
+  background-color: white;
+  color: black;
+  transition: 0.5s ease;
 }
 
 footer {
@@ -139,6 +142,29 @@ footer li {
 @media screen and (min-width: 1200px) {
   section {
     width: 70% !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  section {
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 90%;
+    line-height: 2;
+  }
+  section .desc {
+    width: 100%;
+    margin: 0;
+  }
+  section button {
+    width: 100%;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
   }
 }
 @keyframes fadeIn {
