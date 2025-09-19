@@ -139,12 +139,7 @@ footer li {
   background-color: #C97D60;
 }
 
-@media screen and (min-width: 1200px) {
-  section {
-    width: 70% !important;
-  }
-}
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   section {
     height: -moz-fit-content;
     height: fit-content;
@@ -152,8 +147,10 @@ footer li {
     flex-direction: column;
     padding: 2rem;
     margin: 2rem auto;
-    width: 90%;
     line-height: 2;
+  }
+  section button {
+    padding: 0.7rem;
   }
   section .desc {
     width: 100%;
